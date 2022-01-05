@@ -2,33 +2,33 @@
 
 document.getElementById("app").innerHTML = ``;
 
-const listRating = [
+let listRating = [
     {
         icon: "https://lms.ithillel.ua/uploads/images/885d3b77fc0d39a12aad31af709b9bd6.jpg",
         secondname: "Кушнір",
         name: "Олександра",
-        dz: "7",
+        dz: "11",
         grade: "687",
     },
     {
         icon: "https://lms.ithillel.ua/uploads/images/885d3b77fc0d39a12aad31af709b9bd6.jpg",
         secondname: "Одінцов",
         name: "Олександр",
-        dz: "7",
+        dz: "10",
         grade: "680",
     },
     {
         icon: "https://lms.ithillel.ua/uploads/images/885d3b77fc0d39a12aad31af709b9bd6.jpg",
         secondname: "Ващенко",
         name: "Давід",
-        dz: "7",
+        dz: "9",
         grade: "675",
     },
     {
         icon: "https://lms.ithillel.ua/uploads/images/885d3b77fc0d39a12aad31af709b9bd6.jpg",
         secondname: "Яременко",
         name: "Олександр",
-        dz: "7",
+        dz: "8",
         grade: "657",
     },
     {
@@ -45,9 +45,16 @@ const listRating = [
         dz: "6",
         grade: "578",
     },
-  ];
-  
-    listRating.forEach(function (element) {
+];
+
+const result = listRating.filter(function (element) {
+    const isFilter = element.dz > 8;
+    return isFilter;
+});
+
+console.log(result);
+
+    result.forEach(function (element) {
     document.getElementById("app").insertAdjacentHTML(
       "beforeend",
       `
